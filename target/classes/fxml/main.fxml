@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.weatherapp.controllers.MainController"
+           styleClass="root-pane">
+    
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <!-- App Heading -->
+            <Label text="WeatherView Pro" styleClass="app-heading"/>
+            
+            <ScrollPane fitToWidth="true" 
+                      styleClass="main-scroll-pane" 
+                      VBox.vgrow="ALWAYS">
+                <StackPane alignment="CENTER">
+                    <VBox styleClass="main-container" 
+                        alignment="CENTER" 
+                        spacing="15">
+                        
+                        <padding>
+                            <Insets top="20" right="20" bottom="20" left="20"/>
+                        </padding>
+                        
+                        <!-- Search Section -->
+                        <HBox spacing="10" alignment="CENTER" maxWidth="400">
+                            <TextField fx:id="searchField" 
+                                    promptText="Enter city name"
+                                    styleClass="search-field"
+                                    HBox.hgrow="ALWAYS"/>
+                            <Button fx:id="searchButton" 
+                                text="Search"
+                                onAction="#handleSearch"
+                                styleClass="search-button"/>
+                        </HBox>
+                        
+                        <!-- Error Label -->
+                        <Label fx:id="errorLabel" 
+                            styleClass="error-text"
+                            visible="false"
+                            managed="false"
+                            wrapText="true"/>
+                        
+                        <!-- Weather Information -->
+                        <VBox fx:id="weatherInfo" 
+                            spacing="10" 
+                            alignment="CENTER">
+                            <Label fx:id="cityLabel" styleClass="city-name"/>
+                            <Label fx:id="temperatureLabel" styleClass="temperature"/>
+                            <Label fx:id="descriptionLabel" styleClass="weather-description"/>
+                        </VBox>
+                        
+                        <!-- Weather Details -->
+                        <FlowPane fx:id="detailsContainer" 
+                                hgap="10" 
+                                vgap="10"
+                                alignment="CENTER"/>
+                        
+                        <!-- Forecast Title -->
+                        <Label text="5-Day Forecast" styleClass="forecast-title"/>
+                    </VBox>
+                </StackPane>
+            </ScrollPane>
+            
+            <!-- Forecast Section (Moved outside ScrollPane) -->
+            <FlowPane fx:id="forecastContainer" 
+                    hgap="10" 
+                    vgap="10"
+                    alignment="CENTER"
+                    styleClass="forecast-container"
+                    VBox.vgrow="NEVER"
+                    minHeight="200"/>
+                    
+            <padding>
+                <Insets top="0" right="0" bottom="20" left="0"/>
+            </padding>
+        </VBox>
+    </center>
+</BorderPane> 

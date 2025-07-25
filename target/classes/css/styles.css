@@ -1,0 +1,198 @@
+.root-pane {
+    -fx-background-color: linear-gradient(to bottom right, #1e3c72, #2a5298);
+}
+
+.app-heading {
+    -fx-font-size: 32px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0, 0, 0);
+    -fx-padding: 10px 0 20px 0;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
+.main-scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-fit-to-height: true;
+    -fx-fit-to-width: true;
+    -fx-pref-height: 500px;
+    -fx-max-height: 600px;
+}
+
+.main-scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.main-container {
+    -fx-background-color: transparent;
+    -fx-pref-width: 900px;
+    -fx-max-width: 1000px;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+}
+
+.search-field {
+    -fx-min-width: 200px;
+    -fx-pref-width: 300px;
+    -fx-padding: 8px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+}
+
+.search-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 8px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-min-width: 70px;
+}
+
+.search-button:hover {
+    -fx-background-color: #45a049;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 0);
+}
+
+.search-button:disabled {
+    -fx-background-color: #cccccc;
+    -fx-opacity: 0.7;
+}
+
+.error-text {
+    -fx-text-fill: #ff6b6b;
+    -fx-font-size: 14px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.city-name {
+    -fx-font-size: 28px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.temperature {
+    -fx-font-size: 42px;
+    -fx-text-fill: white;
+    -fx-text-alignment: center;
+}
+
+.weather-description {
+    -fx-font-size: 16px;
+    -fx-text-fill: #e0e0e0;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+    -fx-padding: 0 0 5px 0;
+}
+
+.weather-box {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-padding: 10px;
+    -fx-background-radius: 10px;
+    -fx-min-width: 100px;
+    -fx-pref-width: 120px;
+    -fx-max-width: 140px;
+    -fx-min-height: 100px;
+    -fx-pref-height: 120px;
+    -fx-max-height: 140px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 0);
+    -fx-alignment: center;
+}
+
+.weather-box:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0, 0, 0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.weather-icon {
+    -fx-fit-width: 24px;
+    -fx-fit-height: 24px;
+    -fx-preserve-ratio: true;
+}
+
+.weather-box-title {
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 12px;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.weather-box-value {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-wrap-text: true;
+}
+
+.forecast-title {
+    -fx-font-size: 22px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 50px 0 0 0;
+    -fx-margin-top: 30px;
+    -fx-margin-bottom: 0;
+}
+
+#detailsContainer {
+    -fx-pref-width: 700px;
+    -fx-max-width: 800px;
+    -fx-pref-height: 250px;
+    -fx-alignment: center;
+}
+
+.forecast-container {
+    -fx-background-color: transparent;
+    -fx-min-height: 200px;
+    -fx-pref-height: 220px;
+    -fx-pref-width: 800px;
+    -fx-max-width: 1000px;
+}
+
+#forecastContainer {
+    -fx-pref-width: 100%;
+    -fx-max-width: 1000px;
+    -fx-min-height: 180px;
+    -fx-pref-height: 200px;
+    -fx-alignment: center;
+    -fx-padding: 0 10px 10px 10px;
+    -fx-spacing: 10;
+    -fx-margin-top: 0;
+}
+
+.forecast-card {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-padding: 10px;
+    -fx-background-radius: 10px;
+    -fx-min-width: 100px;
+    -fx-pref-width: 120px;
+    -fx-max-width: 140px;
+    -fx-min-height: 100px;
+    -fx-pref-height: 120px;
+    -fx-max-height: 140px;
+    -fx-alignment: center;
+    -fx-spacing: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 8, 0, 0, 0);
+}
+
+.forecast-card:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.35);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 12, 0, 0, 0);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.forecast-card Text {
+    -fx-fill: white;
+    -fx-text-alignment: center;
+    -fx-font-size: 12px;
+}

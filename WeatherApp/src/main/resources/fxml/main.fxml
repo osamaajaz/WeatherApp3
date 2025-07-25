@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.weatherapp.controllers.MainController"
+      spacing="20"
+      styleClass="main-container">
+
+    <!-- Search Section -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="searchField" promptText="Enter city name" styleClass="search-field"/>
+        <Button fx:id="searchButton" text="Search" onAction="#handleSearch" styleClass="search-button"/>
+    </HBox>
+
+    <!-- Main Weather Information -->
+    <ScrollPane fx:id="detailsScrollPane" fitToWidth="true" styleClass="weather-scroll-pane">
+        <VBox fx:id="weatherInfo" spacing="20" alignment="CENTER" styleClass="weather-info">
+            <!-- City name, temperature and description will be added here -->
+            <Text fx:id="cityName" styleClass="city-name"/>
+            <Text fx:id="temperature" styleClass="temperature"/>
+            <Text fx:id="weatherDescription" styleClass="weather-description"/>
+            
+            <!-- Weather Details Container -->
+            <FlowPane fx:id="weatherDetailsContainer" 
+                     hgap="10" vgap="10" 
+                     alignment="CENTER"/>
+        </VBox>
+    </ScrollPane>
+
+    <!-- Forecast Section -->
+    <VBox spacing="10">
+        <Label text="5-Day Forecast" styleClass="forecast-title"/>
+        <ScrollPane fitToWidth="true" styleClass="forecast-scroll-pane">
+            <HBox fx:id="forecastContainer" spacing="20" alignment="CENTER"/>
+        </ScrollPane>
+    </VBox>
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+</VBox> 

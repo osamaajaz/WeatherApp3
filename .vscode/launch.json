@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run WeatherApp",
+            "request": "launch",
+            "mainClass": "com.weatherapp.Main",
+            "projectName": "WeatherApp",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+} 

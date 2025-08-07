@@ -1,0 +1,25 @@
+php
+// Set your timezone
+date_default_timezone_set("Asia/Kolkata");
+// Current date and time
+$currentDate = date("d-m-Y");
+$currentTime = date("h:i A");
+// Date after 5 days
+$dateAfter5Days = date("d-m-Y", strtotime("+5 days"));
+// Date before 10 days
+$dateBefore10Days = date("d-m-Y", strtotime("-10 days"));
+?>
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<title>Simple Date & Time in PHP</title>
+<h2>PHP Date & Time Example</h2>
+<p><strong>Current Date:</strong> <?php echo $currentDate; ?></p>
+<p><strong>Current Time:</strong> <?php echo $currentTime; ?></p>
+<p><strong>Date After 5 Days:</strong> <?php echo $dateAfter5Days; ?></p>
+<p><strong>Date 10 Days Ago:</strong> <?php echo $dateBefore10Days;
+?></p>
+</body>
+</html>

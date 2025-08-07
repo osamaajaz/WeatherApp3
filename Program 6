@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="calcApp">
+<head>
+  <meta charset="UTF-8">
+  <title>Factorial & Square Calculator</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f7f7f7;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      font-size: 18px;
+      width: 200px;
+      margin: 10px;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body ng-controller="CalcController">
+  <h2>Factorial & Square Calculator</h2>
+  <input type="number" ng-model="number" placeholder="Enter a number">
+
+  <div class="result" ng-if="number !== undefined">
+    <p><strong>Square:</strong> {{ number * number }}</p>
+    <p><strong>Factorial:</strong> {{ factorial(number) }}</p>
+  </div>
+
+  <script>
+    angular.module('calcApp', [])
+      .controller('CalcController', ['$scope', function($scope) {
+        $scope.factorial = function(n) {
+          if (n < 0 || !Number.isInteger(n)) return 'Undefined';
+          if (n === 0 || n === 1) return 1;
+          let result = 1;
+          for (let i = 2; i <= n; i++) {
+            result *= i;
+          }
+          return result;
+        };
+      }]);
+  </script>
+</body>
+</html>

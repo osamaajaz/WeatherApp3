@@ -1,0 +1,46 @@
+
+<?php
+// Set cookie name
+$cookie_name = "visit_count";
+
+// Check if cookie exists
+if (isset($_COOKIE[$cookie_name])) {
+    $visit_count = $_COOKIE[$cookie_name] + 1;
+} else {
+    $visit_count = 1; // First visit
+}
+
+// Set/update the cookie (expires in 1 year)
+setcookie($cookie_name, $visit_count, time() + (365 * 24 * 60 * 60)); // 1 year
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PHP Hit Counter Using Cookies</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      padding: 30px;
+      text-align: center;
+    }
+    .counter-box {
+      background: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="counter-box">
+    <h2>Hit Counter</h2>
+    <p>
+      <?php
+        echo "You have visited this page <strong>$visit_count</strong> time(s).";
+      ?>
+    </p>
+  </div>
+</body>
+</html>

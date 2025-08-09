@@ -1,0 +1,15 @@
+	1.	Click on Services.
+	2.	Click on All services.
+	3.	Click on Route 53.
+	4.	Click on dropdown trigger.
+	5.	Click on Hosted zones.
+	6.	Click on Create hosted zone.
+	7.	Type "route53.com".
+	8.	Click on Type.
+	9.	Click on Create hosted zone.
+	10.	Click on Close.
+	11.	Click on Create record.
+	12.	Type "www".
+	13.	Type "192.0.2.235".
+	14.	Click on Create records.
+	15.	After completing the creation of the record, go to a new tab and enter www.route53.com to check if it is working or not. If it shows the AWS screen, it is working.

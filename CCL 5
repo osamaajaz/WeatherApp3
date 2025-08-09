@@ -1,0 +1,52 @@
+
+Step 1: Set up an AWS Account
+	•	If you don’t have an AWS account, sign up at aws.amazon.com.
+	•	After registering, sign in to the AWS Management Console.
+
+⸻
+
+Step 2: Launch an Amazon EC2 Instance
+	•	Navigate to the EC2 Dashboard.
+	•	Search for EC2 in the AWS Management Console and open the EC2 service.
+	•	Launch a new instance:
+	•	Click Launch Instance.
+	•	Choose an Amazon Machine Image (AMI) (e.g., Amazon Linux 2).
+	•	Select an instance type (e.g., t2.micro for free-tier usage).
+	•	Configure instance details, including network settings.
+	•	In the storage settings, you can leave the defaults.
+	•	In security groups, configure inbound rules for required protocols.
+	•	Review and click Launch.
+
+⸻
+
+Step 3: Create an AMI from EC2 Instance
+	•	To ensure Auto Scaling creates identical instances, create an AMI from the EC2 instance.
+	•	In the EC2 Dashboard, select your running instance.
+	•	Choose Actions → Image and Templates → Create Image.
+	•	Enter a name and description for the image and click Create Image.
+
+⸻
+
+Step 4: Set up an Auto Scaling Group
+	•	Navigate to the Auto Scaling dashboard.
+	•	In the AWS Console, search for Auto Scaling and open the Auto Scaling Groups service.
+	•	Create a Launch Template:
+	•	A launch template specifies the instance configuration.
+	•	Click Launch Templates → Create Launch Template.
+	•	Enter a name for the template.
+	•	Under Launch Template contents, configure the instance details based on your earlier EC2 setup.
+	•	Create an Auto Scaling Group:
+	•	After creating the launch template, navigate to Auto Scaling Groups → Create Auto Scaling Group.
+	•	Select the previously created launch template.
+	•	Specify the group name and VPC/subnets for the scaling group.
+	•	Configure group size and scaling policies:
+	•	Set the desired capacity (initial number of instances), minimum size, and maximum size.
+	•	Example: Minimum = 1, Desired = 2, Maximum = 4.
+	•	Select scaling policies:
+	•	Choose Target Tracking to automatically scale based on CPU utilization or another metric.
+	•	Example: Set a target to maintain CPU utilization at 50%.
+	•	Configure Load Balancing (optional):
+	•	If you have a load balancer, attach it to distribute traffic across multiple instances.
+	•	Ensure the health check is enabled for instances.
+	•	Review and create.
+	•	Review all settings and click Create Auto Scaling Group.

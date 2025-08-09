@@ -1,0 +1,28 @@
+Linux-based EC2 Instance
+1.  Sign in to the AWS Management Console.
+2.  Click on the EC2 service, select Instances.
+3.  Click on the Launch Instance button to create a new instance.
+4.  Enter the name of the instance and select Amazon Linux AMI.
+5.  Under instance type, select free tier eligible instance.
+	•  Click on create new key pair to generate the .pem file.
+6.  Enter the name of the key pair and click create key pair. Now .pem file is valid and downloaded to the local computer.
+7.  Network settings.
+Windows-based EC2 Instance
+1.  Sign in to the AWS Management Console.
+2.  Click on the EC2 service, select Instances.
+3.  Click on the Launch Instance button to create a new instance.
+4.  Enter the name of the instance and select Windows AMI.
+5.  Under instance type, select free tier eligible instance.
+	•  Click on create new key pair to generate the .pem file.
+6.  Enter the name of the key pair and click create key pair. Now .pem file is valid and downloaded to the local computer.
+7.  Network settings.
+	•  Click on edit button to edit the network details as follows.
+8.  Add required elastic block storage (EBS) under configure storage section. Click on launch instance.
+9.  Now instance has been created successfully.
+10.  Click on instance to view active instances. Select the instance created as shown and click on connect.
+11.  Select RDP client in connect to instance Windows as follows.
+12.  Click on Get Password and upload the .pem file created by clicking upload mind key file.
+13.  Click on Decrypt Password and copy the password generated. Now click on download remote desktop file to setup of window instance. wininstance.rdp file is downloaded.
+14.  Click on wininstance.rdp file and click connect button to run the Windows instance.
+15.  Paste the password which was created in Step 13. Click OK and Yes in next windows.
+•  Windows instance is created and launched successfully.

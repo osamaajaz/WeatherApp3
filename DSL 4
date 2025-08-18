@@ -1,0 +1,59 @@
+
+# Import necessary libraries
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Data for the plots
+x = np.linspace(0, 10, 100)   # 100 equally spaced points between 0 and 10
+y = np.sin(x)                 # Sine of x
+y2 = np.cos(x)                # Cosine of x
+
+# Line Plot
+plt.figure(figsize=(8, 6))
+plt.plot(x, y, label='sin(x)', color='blue', linewidth=2)
+plt.plot(x, y2, label='cos(x)', color='red', linestyle='--', linewidth=2)
+plt.title('Sine and Cosine Functions')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Scatter Plot
+plt.figure(figsize=(8, 6))
+plt.scatter(x, y, color='green', label='sin(x)', s=50)   # s = marker size
+plt.scatter(x, y2, color='purple', label='cos(x)', s=50)
+plt.title('Scatter Plot of sin(x) and cos(x)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# Bar Plot
+categories = ['A', 'B', 'C', 'D', 'E']
+values = [3, 7, 2, 5, 8]
+plt.figure(figsize=(8, 6))
+plt.bar(categories, values, color='orange')
+plt.title('Bar Plot Example')
+plt.xlabel('Categories')
+plt.ylabel('Values')
+plt.show()
+
+# Histogram
+data = np.random.randn(1000)   # Generate 1000 random values
+plt.figure(figsize=(8, 6))
+plt.hist(data, bins=30, color='cyan', edgecolor='black')
+plt.title('Histogram Example')
+plt.xlabel('Data')
+plt.ylabel('Frequency')
+plt.show()
+
+# Pie Chart
+labels = ['Python', 'Java', 'C++', 'JavaScript', 'Other']
+sizes = [45, 25, 15, 10, 5]
+colors = ['gold', 'yellowgreen', 'lightcoral', 'lightskyblue', 'purple']
+plt.figure(figsize=(8, 6))
+plt.pie(sizes, labels=labels, colors=colors, autopct='%1.1f%%', startangle=140)
+plt.title('Programming Language Popularity')
+plt.show()
